@@ -12,7 +12,7 @@ public class ACTIVIDAD_M3 extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/view/FXMLDocument.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();

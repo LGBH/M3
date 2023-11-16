@@ -24,6 +24,11 @@ public class ListaP {
         }
     }
 
+    public boolean getIsEmpty() {
+        return cab == null ? true : false;
+
+    }
+
     Producto getReferencia(String id) {
         if (cab == null) {
             return null;
@@ -76,26 +81,24 @@ public class ListaP {
             }
         }
     }
-    
-        void setAddFinal( Producto q ){
+
+    void setAddFinal(Producto q) {
         Producto p, aux;
-        if( cab == null ){
+        if (cab == null) {
             cab = q;
-            cab.sig = cab;           
+            cab.sig = cab;
             JOptionPane.showMessageDialog(null, "Agregado al final...");
-        }
-        else{
-            aux = getReferencia( q.idProducto );
-            if( aux == null ){
-                p=getUltimo();                
+        } else {
+            aux = getReferencia(q.idProducto);
+            if (aux == null) {
+                p = getUltimo();
                 p.sig = q;
                 q.sig = cab;
-                JOptionPane.showMessageDialog(null, 
-                "Agregado al final...");
-            }
-            else{
-                JOptionPane.showMessageDialog(null, 
-                "Elemento existe...");
+                JOptionPane.showMessageDialog(null,
+                        "Agregado al final...");
+            } else {
+                JOptionPane.showMessageDialog(null,
+                        "Elemento existe...");
             }
         }
     }
